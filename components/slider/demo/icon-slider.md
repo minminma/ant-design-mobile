@@ -8,8 +8,7 @@ title: 带 icon 的滑块
 
 
 ````jsx
-import { Slider, WhiteSpace, WingBlank } from 'antd-mobile';
-import Icon from '../../icon';
+import { Slider, WhiteSpace, WingBlank, SliderTooltipPlugin, Icon } from 'antd-mobile';
 
 const IconSlider = React.createClass({
   getInitialState() {
@@ -39,7 +38,7 @@ const IconSlider = React.createClass({
         <WingBlank size="lg">
           <div className="iconWrapper">
             <Icon className={this.state.preIconClass} type={this.props.icon[0]} />
-            <Slider {...this.props} onChange={this.handleChange} value={this.state.sliderValue} />
+            <Slider {...this.props} onChange={this.handleChange} value={this.state.sliderValue} plugin={[SliderTooltipPlugin]} />
             <Icon className={this.state.nextIconClass} type={this.props.icon[1]} />
           </div>
         </WingBlank>

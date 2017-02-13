@@ -8,7 +8,7 @@ title: 事件
 
 
 ````jsx
-import { Slider, WingBlank, WhiteSpace } from 'antd-mobile';
+import { Slider, WingBlank, WhiteSpace, SliderTooltipPlugin } from 'antd-mobile';
 
 function log(value) {
   console.log(value);
@@ -20,11 +20,11 @@ const App = React.createClass({
       <div>
         <WhiteSpace size="lg" />
         <WingBlank size="lg">
-          <Slider defaultValue={30} onChange={log} />
+          <Slider defaultValue={30} onChange={log} plugin={[SliderTooltipPlugin]} />
         </WingBlank>
         <WhiteSpace size="lg" />
         <WingBlank size="lg">
-          <Slider defaultValue={30} onAfterChange={log} />
+          <Slider defaultValue={30} onAfterChange={log} plugin={[SliderTooltipPlugin]} />
         </WingBlank>
         <WhiteSpace size="lg" />
       </div>
